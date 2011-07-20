@@ -15,6 +15,7 @@ BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	log4cpp-devel
 BuildRequires:	nspr-devel >= 4.7.1
+BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.357
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xulrunner-devel >= 1.9.1
