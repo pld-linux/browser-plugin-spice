@@ -1,13 +1,12 @@
 Summary:	Spice-XPI plugin for Mozilla compatible browsers
 Summary(pl.UTF-8):	Wtyczka Spice-XPI dla przeglądarek WWW kompatybilnych z Mozillą
 Name:		browser-plugin-spice
-Version:	2.6
+Version:	2.7
 Release:	0.1
 License:	MPL v1.1 or GPL v2.0 or LGPL v2.1
 Group:		X11/Applications
 Source0:	http://spice-space.org/download/releases/spice-xpi-%{version}.tar.bz2
-# Source0-md5:	e1099df16c66a762c2cc176c39ff8561
-Patch0:		spice-xpi-sh.patch
+# Source0-md5:	3f21bc747906a738f17d02590c4a1ef3
 URL:		http://spice-space.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -29,7 +28,6 @@ Wtyczka Spice-XPI dla przeglądarek WWW kompatybilnych z Mozillą.
 
 %prep
 %setup -q -n spice-xpi-%{version}
-%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -38,6 +36,7 @@ Wtyczka Spice-XPI dla przeglądarek WWW kompatybilnych z Mozillą.
 %{__autoheader}
 %{__automake}
 %configure \
+	--disable-silent-rules \
 	--disable-static
 
 %{__make}
